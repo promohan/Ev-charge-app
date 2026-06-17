@@ -1,16 +1,38 @@
-# React + Vite
+# ⚡ EVCharge Chandigarh
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React.js web application focused on Electric Vehicles (EVs) in Chandigarh. Users can explore EV cars, compare specifications, discover charging stations, and manage favorite vehicles through a responsive and user-friendly interface.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://promohan.github.io/Ev-charge-app/
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Browse popular EVs available in India
+* Compare vehicle specifications
+* Explore Chandigarh charging stations
+* Save favorite vehicles
+* Responsive design for mobile, tablet, and desktop
+* Modern dark-themed UI
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React.js
+* Vite
+* React Router DOM
+* JavaScript (ES6+)
+* CSS3
+* Git & GitHub
+
+## 📱 Featured EV Brands
+
+Tata • MG • Mahindra • Hyundai • BYD • Kia • Volvo • BMW • Mercedes-Benz
+
+
+## 👨‍💻 Developer
+
+**Mohan**
+
+Frontend Developer | React.js Developer | Web Development Enthusiast
+
+⭐ If you like this project, consider giving it a star on GitHub.
