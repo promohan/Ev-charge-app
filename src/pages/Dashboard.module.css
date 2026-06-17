@@ -1,0 +1,20 @@
+.wrapper {
+  padding: 120px 4% 60px;
+  min-height: 100vh;
+}
+
+.neon { color: var(--accent-neon); }
+.sub { color: var(--text-muted); margin-bottom: 40px; }
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.num {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--accent-neon);
+  margin: 10px 0;
+}

@@ -1,0 +1,171 @@
+.wrapper {
+  padding: 140px 6% 80px;
+  min-height: 100vh;
+  background-color: var(--bg-primary); /* Keeps your premium light green background */
+  transition: var(--transition-smooth);
+}
+
+.headerBlock {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #0F172A; /* Slate black header color matching the screenshot */
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-family: var(--font-primary), sans-serif;
+  color: #52647C; /* Soft steel blue/gray subtitle */
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+/* ⬜ Card Box Styled to Mirror Screenshot 2026-06-16 151826.png exactly */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 40px; /* High spatial pad to give it that wide capsule look */
+  background: var(--bg-secondary); /* Automatically turns pure white in light mode */
+  border-radius: 28px; /* Ultra smooth curved corners */
+  border: 1px solid rgba(0, 200, 143, 0.08); /* Extremely faint tracking glow accent border */
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.02); /* Delicate layout depth shadow */
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.iconContainer {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🪙 Perfectly scaled light-gray icon setup */
+.emptyIcon {
+  font-size: 3.2rem;
+  color: #94A3B8; /* Muted slate gray matching the screenshot icon exactly */
+  stroke-width: 1.2px; /* Keeps the icon lines thin and clean */
+  opacity: 0.75;
+}
+
+/* 📝 Subtitle text matching the graphic template */
+.emptyText {
+  font-family: var(--font-primary), sans-serif;
+  color: #475569; /* Soft mid-slate text */
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 600px;
+  line-height: 1.6;
+  letter-spacing: -0.1px;
+}
+
+/* 📊 Table Layout Configuration Rules */
+.tableResponsive {
+  overflow-x: auto;
+  border-radius: 24px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--card-shadow);
+}
+
+.compareTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-secondary);
+}
+
+.compareTable th, 
+.compareTable td {
+  padding: 22px 24px;
+  text-align: left;
+  border-bottom: 1px solid var(--glass-border);
+  transition: var(--transition-smooth);
+}
+
+.compareTable th {
+  background: rgba(148, 163, 184, 0.05);
+  font-weight: 600;
+}
+
+.paramHeader {
+  color: var(--text-main);
+  font-size: 1.1rem;
+}
+
+.vehicleHeader {
+  color: var(--text-main);
+  font-size: 1.1rem;
+  min-width: 250px;
+}
+
+.thContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.removeBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #EF4444;
+  background: rgba(239, 68, 68, 0.08);
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  transition: var(--transition-smooth);
+}
+
+.removeBtn:hover {
+  background: #EF4444;
+  color: #FFFFFF;
+}
+
+.paramLabel {
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 1rem;
+  width: 25%;
+}
+
+.dataValue {
+  font-family: var(--font-mono), monospace;
+  color: var(--text-main);
+  font-size: 1.05rem;
+}
+
+.priceText {
+  color: var(--accent-neon) !important;
+  font-weight: 700;
+}
+
+.tableRow:hover {
+  background: rgba(0, 230, 167, 0.02);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 100px 4% 40px;
+  }
+  .title {
+    font-size: 1.9rem;
+  }
+  .emptyState {
+    padding: 80px 20px;
+  }
+  .emptyIcon {
+    font-size: 2.8rem;
+  }
+  .emptyText {
+    font-size: 1rem;
+  }
+}

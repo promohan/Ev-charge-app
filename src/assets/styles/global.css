@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --font-primary: 'Inter', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  
+  /* Dark Theme Variables (Default) */
+  --bg-primary: #07111F;
+  --bg-secondary: #0F172A;
+  --accent-neon: #00E6A7;
+  --accent-glow: rgba(0, 230, 167, 0.15);
+  --text-main: #FFFFFF;
+  --text-muted: #94A3B8;
+  --glass-bg: rgba(15, 23, 42, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* 🌿 Light Theme Overrides (Updated to match Screenshot 2026-06-16 140822.png) */
+[data-theme="light"] {
+  /* Soft light-green background from the screenshot */
+  --bg-primary: #EEF7F1; 
+  
+  /* Pure white for the individual vehicle/content cards so they pop off the green background */
+  --bg-secondary: #FFFFFF; 
+  
+  --accent-neon: #00C88F;
+  --accent-glow: rgba(0, 200, 143, 0.1);
+  --text-main: #0F172A;
+  --text-muted: #52647C; /* Slightly deepened for better reading contrast on green */
+  
+  /* Glass effects tuned for light-green backdrop layering */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 200, 143, 0.12); /* Tinted subtle green border */
+  --card-shadow: 0 10px 30px rgba(0, 143, 102, 0.04); /* Soft green-tinted depth shadow */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-primary);
+  overflow-x: hidden;
+  /* Upgraded layout animation to use your high-performance bezier transition variable */
+  transition: var(--transition-smooth);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-primary);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+  transition: var(--transition-smooth);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  border: 2px solid var(--bg-primary);
+  transition: var(--transition-smooth);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-neon);
+}

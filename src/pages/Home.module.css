@@ -1,0 +1,211 @@
+.container {
+  padding-top: 80px;
+}
+
+.hero {
+  position: relative;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzLREjxKC6mkdOVpUNPlgjFaq0886be6BKLATGjqWrPQ&s=10');
+  
+  /* 🛠️ FIX 1: Keeps the image centered horizontally and vertically at all times */
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  padding: 0 20px;
+  overflow: hidden;
+  margin-top: -50px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.gradientText {
+  background: linear-gradient(90deg, var(--accent-neon), #00B0FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.ctaGroup {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.primaryBtn {
+  background: var(--accent-neon);
+  color: #07111F;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px var(--accent-glow);
+  transition: var(--transition-smooth);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--accent-glow);
+}
+
+.secondaryBtn {
+  border: 1px solid var(--glass-border);
+  color: var(--text-main);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(4px);
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 30px;
+  transition: var(--transition-smooth);
+}
+
+.secondaryBtn:hover {
+  /* color: #07111F; */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--accent-glow);
+}
+
+/* Metrics styles */
+.metrics {
+  display: grid;
+  max-width: 1200px;
+  margin: -50px auto 60px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+  margin-top: 50px;
+}
+
+.metricCard {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+}
+
+.metricCard h3 {
+  font-size: 2.5rem;
+  color: var(--accent-neon);
+  margin-bottom: 5px;
+}
+
+/* Savings Calculator Custom Layout style mapping */
+.calculatorSection {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 40px;
+  background: var(--bg-secondary);
+  border-radius: 24px;
+  border: 1px solid var(--glass-border);
+}
+
+.calcHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.calcGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.controlGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--glass-border);
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent-neon);
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.resultDisplay {
+  background: var(--glass-bg);
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  text-align: center;
+}
+
+.savingsValue {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--accent-neon);
+  margin: 15px 0;
+}
+
+/* ==========================================================================
+   📱 RESPONSIVE BREAKPOINT UPGRADES
+   ========================================================================== */
+@media(max-width: 768px) {
+  /* 🛠️ FIX 2: Relax viewport constraint to let background adapt naturally */
+  .hero {
+    height: auto;
+    padding: 100px 20px 60px 20px; /* Add proportional spacing top and bottom */
+    margin-top: 0; /* Clear negative pull to prevent layout overlap bugs */
+  }
+
+  .title { 
+    font-size: 2.2rem; 
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  /* 🛠️ FIX 3: Dynamic flow for buttons on ultra-narrow phones */
+  .ctaGroup {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .metrics, .calcGrid { 
+    grid-template-columns: 1fr; 
+  }
+  
+  .metrics { 
+    margin-top: 40px; 
+  }
+}

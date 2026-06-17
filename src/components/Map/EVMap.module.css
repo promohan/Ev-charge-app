@@ -1,0 +1,69 @@
+.mapWrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--card-shadow);
+}
+
+.mapContainer {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.popupContent {
+  font-family: var(--font-primary);
+  color: #0F172A !important; /* Ensure readable dark contrast standard popups */
+  padding: 4px;
+}
+
+.popupContent h3 {
+  font-family: var(--font-heading);
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.popupContent p {
+  font-size: 0.85rem;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.available { background: #DCFCE7; color: #166534; }
+.occupied { background: #FEF3C7; color: #92400E; }
+.offline { background: #FEE2E2; color: #991B1B; }
+
+.dirBtn {
+  display: block;
+  text-align: center;
+  background: #00E6A7;
+  color: #07111F !important;
+  font-weight: 600;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  transition: opacity 0.2s;
+}
+
+.dirBtn:hover {
+  opacity: 0.9;
+}
