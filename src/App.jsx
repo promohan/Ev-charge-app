@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 // 1. Keep your standard router imports exactly the same
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Common/Navbar';
 import { AppProvider } from './context/AppContext';
 import { ThemeProvider } from './context/ThemeContext';
