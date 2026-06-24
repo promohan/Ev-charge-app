@@ -3,6 +3,7 @@ import EVMap from '../components/Map/EVMap';
 import { FiSearch, FiMapPin, FiCompass } from 'react-icons/fi';
 import styles from './ChargingStations.module.css';
 import Footer from '../components/Common/Footer'
+import stationsData from '../data/chandigarh_stations.json'
 
 
 export default function ChargingStations() {
@@ -11,12 +12,18 @@ export default function ChargingStations() {
   const [filterConnector, setFilterConnector] = useState('All');
   const [activeCenter, setActiveCenter] = useState(null);
 
+    // const [stations1, setStations1] = useState([]);
+
+
   useEffect(() => {
     // Dynamic absolute client fetch routing directly targeting public data payload
-    fetch('/data/chandigarh_stations.json')
-      .then(res => res.json())
-      .then(data => setStations(data))
-      .catch(err => console.error("Error structural fetching infrastructure data", err));
+    // fetch('')
+    //   .then(res => res.json())
+    //   .then(data => setStations(data))
+    //   .catch(err => console.error("Error structural fetching infrastructure data", err));
+
+    setStations(stationsData);
+
   }, []);
 
   const filteredStations = stations.filter(st => {

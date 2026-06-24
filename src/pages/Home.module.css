@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzLREjxKC6mkdOVpUNPlgjFaq0886be6BKLATGjqWrPQ&s=10');
+  background-image: url('https://images.pexels.com/photos/29653407/pexels-photo-29653407.jpeg');
   
   /* 🛠️ FIX 1: Keeps the image centered horizontally and vertically at all times */
   background-position: center; 

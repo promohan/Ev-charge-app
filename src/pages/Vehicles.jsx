@@ -31,10 +31,15 @@ export default function Vehicles() {
           />
           <select value={filterBrand} onChange={(e) => setFilterBrand(e.target.value)} className={styles.dropdown}>
             <option value="All">All Structural Brands</option>
-            <option value="Tesla">Tesla Motors</option>
-            <option value="Aether">Aether Energy</option>
-            <option value="Rivian">Rivian Automotive</option>
-            <option value="Ola Electric">Ola Electric</option>
+            <option value="Tata Motors">Tata Motors</option>
+            <option value="MG Motor">MG Motor</option>
+            <option value="Mahindra">Mahindra</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Volvo">Volvo</option>
+            <option value="BYD">BYD</option>
+            <option value="Kia">Kia</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes-Benz">Mercedes-Benz</option>
           </select>
         </div>
       </header>

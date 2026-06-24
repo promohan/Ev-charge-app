@@ -2,83 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const AppContext = createContext();
 
-// const MOCK_VEHICLES = [
-//   // --- Original Fleet Data ---
-//   { id: 'v1', name: 'Aether Nexus X', brand: 'Aether', battery: '4.2 kWh', range: 145, speed: 90, chargeTime: '4.5h', price: 145000, img: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=500&auto=format&fit=crop&q=60' },
-//   { id: 'v2', name: 'Tesla Model S Cyber', brand: 'Tesla', battery: '100 kWh', range: 650, speed: 250, chargeTime: '1h', price: 8999000, img: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=500&auto=format&fit=crop&q=60' },
-//   { id: 'v3', name: 'Rivian R1T Pulse', brand: 'Rivian', battery: '135 kWh', range: 520, speed: 180, chargeTime: '1.2h', price: 7500000, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDamf0nDAeIk9tDaGCog0ozUBFD7UsrIfz4A&s' },
-//   { id: 'v4', name: 'Ola S1 Alpha', brand: 'Ola Electric', battery: '4.0 kWh', range: 181, speed: 115, chargeTime: '5h', price: 130000, img: 'https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?w=500&auto=format&fit=crop&q=60' },
-
-//   // --- New Appended Vehicle Data ---
-//   { 
-//     id: 'v5', 
-//     name: 'Model Horizon', 
-//     brand: 'VOLTDRIVE', 
-//     battery: '85 kWh', 
-//     range: 520, 
-//     speed: 220, 
-//     chargeTime: '1.2h', 
-//     price: 5750000, // Converted to INR scale matching baseline catalog
-//     img: 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=500&auto=format&fit=crop&q=60' 
-//   },
-//   { 
-//     id: 'v6', 
-//     name: 'Apex Cruiser', 
-//     brand: 'VOLTDRIVE', 
-//     battery: '100 kWh', 
-//     range: 610, 
-//     speed: 200, 
-//     chargeTime: '1.5h', 
-//     price: 7050000, 
-//     img: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500&auto=format&fit=crop&q=60' 
-//   },
-//   { 
-//     id: 'v7', 
-//     name: 'Pulse City', 
-//     brand: 'AEROEV', 
-//     battery: '50 kWh', 
-//     range: 340, 
-//     speed: 140, 
-//     chargeTime: '3.5h', 
-//     price: 3350000, 
-//     img: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=500&auto=format&fit=crop&q=60' 
-//   },
-//   { 
-//     id: 'v8', 
-//     name: 'Nexon EV Max', 
-//     brand: 'Tata Motors', 
-//     battery: '40.5 kWh', 
-//     range: 437, 
-//     speed: 140, 
-//     chargeTime: '6.5h', 
-//     price: 1999000, 
-//     img: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=500&auto=format&fit=crop&q=60' 
-//   },
-//   { 
-//     id: 'v9', 
-//     name: 'Ioniq 6', 
-//     brand: 'Hyundai', 
-//     battery: '77.4 kWh', 
-//     range: 614, 
-//     speed: 185, 
-//     chargeTime: '1.0h', 
-//     price: 5395000, 
-//     img: 'https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=500&auto=format&fit=crop&q=60' 
-//   },
-//   { 
-//     id: 'v10', 
-//     name: 'ZS EV', 
-//     brand: 'MG', 
-//     battery: '50.3 kWh', 
-//     range: 461, 
-//     speed: 140, 
-//     chargeTime: '5.0h', 
-//     price: 2498000, 
-//     img: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=500&auto=format&fit=crop&q=60' 
-//   }
-// ];
-
-
+// *Vehicles data using array of object *
 const MOCK_VEHICLES = [
   {
     id: "v1",
@@ -303,11 +227,8 @@ const MOCK_VEHICLES = [
 ];
 
 
-
-
-
-
 export const AppProvider = ({ children }) => {
+  
   const [vehicles] = useState(MOCK_VEHICLES);
   const [wishlist, setWishlist] = useState(() => {
     return JSON.parse(localStorage.getItem('ev-wishlist')) || [];

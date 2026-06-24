@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-// 1. Keep your standard router imports exactly the same
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Common/Navbar';
 import { AppProvider } from './context/AppContext';
 import { ThemeProvider } from './context/ThemeContext';
@@ -22,12 +21,10 @@ const GlobalLoader = () => (
     INITIALIZING POWER GRID NODES...
   </div>
 );
-
 export default function App() {
   return (
     <ThemeProvider>
       <AppProvider>
-        {/* 2. UPDATE THIS LINE BELOW TO PASS THE FUTURE CONFIGURATION OBJECT */}
         <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
           <Navbar />
           <Suspense fallback={<GlobalLoader />}>

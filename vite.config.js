@@ -7,5 +7,5 @@ export default defineConfig({
     port: 3000,
     open: true
   },
-base:"/Ev-charge-app/"
+// base:"/Ev-charge-app/"
 });

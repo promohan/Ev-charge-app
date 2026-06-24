@@ -85,9 +85,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-
-
       {/* Footer import  */}
       <Footer />
     </div>
